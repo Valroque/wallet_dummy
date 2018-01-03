@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello World DApp</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <script src="/script/web3/web3.min.js"></script>
+  <script src="/script/crypto-js/crypto-js.js"></script>
+  <script src="/script/bitcore-mnemonic/bitcore-mnemonic.min.js"></script>
+  <script src="/script/bitcore-lib/bitcore-lib.js"></script>
+  <script src="elliptic.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="login.js"></script>
+  <script type="text/javascript" src="wallet.js"></script>
+</head>
+<body class="container">
+  <div id='wallet' style='display:none'>
+    <h1>A Simple Wallet Application</h1><br>
+    <a href="#" onclick="propmtSeeds()" class="btn btn-primary">Create Wallet</a>
+    <a href="#" onclick="getAddresses()" class="btn btn-primary">Console Addresses</a><br><br>
+    <input type="text" id="sender" placeholder="From"/>
+    <input type="text" id="receiver" placeholder="To"/>
+    <input type="text" id="identifier" placeholder="Private Key or Seed"/>
+    <input type="text" id="amount" placeholder="Amount"/>
+    <a href="#" onclick="transfer()" class="btn btn-primary">Transfer Coins</a> <br><br>
+    <input type="text" id="address" placeholder="Account Address"/>
+    <input type="text" id="privateKey" placeholder="Private Key"/>
+    <a href="#" onclick="getBalance()" class="btn btn-primary">Check Wallet Balance</a>
+  </div>
+  <div id='loginPage'>
+    <h1 style="text-align:center">A Simple Wallet Application</h1>
+    <div>
+      <strong>Address : </strong>
+      <input type="text" id="addressLogin" placeholder="Wallet Address"><br>
+      <strong>Private Key  : </strong>
+      <input type="text" id="privateKeyLogin" placeholder="Private Key"><br>
+      or<br>
+      <strong> Seed  : </strong>
+      <input type="text" id="seed" placeholder="Seed Words">
+      <strong> & Password  : </strong>
+      <input type="text" id="password" placeholder="password"><br>
+      <a href="#" onclick="signUp()" class="btn btn-primary">Sign Up</a>
+      <a href="#" onclick="logIn()" class="btn btn-primary">Log In</a>
+    </div>
+  </div>
+  <p id='info'><p>
+</body>
+</html>
